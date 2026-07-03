@@ -1,0 +1,16 @@
+# Exercism
+.exercism/metadata.json
+HELP.md
+HINTS.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
