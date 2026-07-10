@@ -11,7 +11,7 @@ def add_prefix_un(word):
         str: Root word prepended with 'un'.
     """
 
-    pass
+    return 'un' + word
 
 
 def make_word_groups(vocab_words):
@@ -32,7 +32,8 @@ def make_word_groups(vocab_words):
 
     """
 
-    pass
+    separator = ' :: ' + vocab_words[0]
+    return separator.join(vocab_words)
 
 
 def remove_suffix_ness(word):
@@ -53,7 +54,10 @@ def remove_suffix_ness(word):
 
     """
 
-    pass
+    root = word[:-4]
+    if root[-1] == 'i':
+        root = root[:-1] + 'y'
+    return root
 
 
 def adjective_to_verb(sentence, index):
@@ -75,4 +79,7 @@ def adjective_to_verb(sentence, index):
 
     """
 
-    pass
+    adjective = sentence.split()[index]
+    if adjective[-1] in ['.', '?', '!']:
+        adjective = adjective[:-1]
+    return  adjective + 'en'
